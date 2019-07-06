@@ -12,7 +12,7 @@ brew_install()
 {
     which brew || return 1
 
-    brew install -y cscope ctags
+    brew install cscope ctags
 }
 
 main()
