@@ -12,7 +12,9 @@ brew_install()
 {
     which brew || return 1
 
-    brew install cscope ctags
+    #brew install cscope ctags
+    brew install cscope
+    brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 }
 
 main()

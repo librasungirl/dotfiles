@@ -1,4 +1,25 @@
 #!/bin/sh
 echo '# Setup tmux'
-sudo apt-get install -y tmux
-cp tmux.conf ~/.tmux.conf
+
+apt_install()
+{
+    which apt-get || return 1
+
+    sudo apt-get install -y tmux
+}
+
+brew_install()
+{
+    which brew || return 1
+
+    brew install tmux
+}
+
+main()
+{
+    echo '# Setup tmux'
+    brew_install || apt_install
+    cp tmux.conf ~/.tmux.conf
+}
+
+main "$@"

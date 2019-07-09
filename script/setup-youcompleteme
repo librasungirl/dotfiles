@@ -4,7 +4,8 @@ brew_install()
 {
     which brew || return 1
 
-    brew install cmake boost bear
+    # node is required when install below
+    brew install cmake boost bear node
 }
 
 apt_install()

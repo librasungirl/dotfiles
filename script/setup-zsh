@@ -1,3 +1,24 @@
 #!/bin/sh
-sudo apt-get install -y zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+apt_install()
+{
+    which apt-get || return 1
+
+    sudo apt-get install -y zsh
+}
+
+brew_install()
+{
+    which brew || return 1
+
+    brew install zsh
+}
+
+main()
+{
+    echo '# Setup zsh'
+    brew_install || apt_install
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+}
+
+main "$@"

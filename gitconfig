@@ -4,3 +4,18 @@
 	l = log --graph --oneline --decorate
 	ll = log --graph --oneline --decorate --branches --tags
 	lll = log --graph --oneline --decorate --all
+	co = checkout
+	ci = commit
+	cm = commit -m
+	b = branch
+	br = branch -r
+	bd = branch -D
+	cb = checkout -b
+	st = status
+	ls = log --stat
+	lp = log -p
+[user]
+	name = Rongli Sun
+	email = rongli@google.com
+[core]
+	editor = vim
