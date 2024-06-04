@@ -2,6 +2,7 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.local/share/vim/plugged')
 Plug 'altercation/vim-colors-solarized'
+Plug 'flazz/vim-colorschemes'
 Plug 'codable/diffreview'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'digitaltoad/vim-jade'
@@ -36,7 +37,7 @@ syntax on
 
 " Color scheme
 set background=light
-colorscheme solarized
+colorscheme delek
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='light'
 
